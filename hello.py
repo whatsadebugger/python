@@ -1,4 +1,5 @@
 # Comment
+# this file has a ton of random code
 print "Hello World!"
 print('Hello world!')
 
@@ -18,3 +19,11 @@ print str[2:5]
 print str[2:]
 print str * 2
 print str + "TEST"
+
+print 5/2
+print 5.0/2.0
+
+print "{} is a {}".format("This", "placeholder")
+print "{0} can be {1}".format("strings", "formatted")
+# You can use keywords if you don't want to count.
+print x"{name} wants to eat {food}".format(name="Ahmad", food="Ice Cream")
