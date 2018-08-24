@@ -70,12 +70,10 @@ if __name__ == '__main__':
     Ahmad.species = "H. neanderthalensis"
     i.say(i.get_species())          # => "Ahmad: H. neanderthalensis"
 
+
     # Call the static method
     print(Ahmad.grunt())            # => "*grunt*"
 
-    # Cannot call static method with instance of object 
-    # because i.grunt() will automatically put "self" (the object i) as an argument
-    print(i.grunt())                # => TypeError: grunt() takes 0 positional arguments but 1 was given
 
     # Update the property for this instance
     i.age = 200
