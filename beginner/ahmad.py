@@ -69,7 +69,6 @@ if __name__ == '__main__':
     # Change the shared attribute
     Ahmad.species = "H. neanderthalensis"
     i.say(i.get_species())          # => "Ahmad: H. neanderthalensis"
-    j.say(j.get_species())          # => "Joel: H. neanderthalensis"
 
     # Call the static method
     print(Ahmad.grunt())            # => "*grunt*"
