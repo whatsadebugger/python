@@ -1,21 +1,14 @@
-# class adapted from https://learnxinyminutes.com/docs/python3/
-class Ahmad:
+class Human:
 
     # A class attribute. It is shared by all instances of this class
     species = "H. sapiens"
 
-    # Basic initializer, this is called when this class is instantiated.
-    # Note that the double leading and trailing underscores denote objects
-    # or attributes that are used by Python but that live in user-controlled
-    # namespaces. Methods(or objects or attributes) like: __init__, __str__,
-    # __repr__ etc. are called special methods (or sometimes called dunder methods)
-    # You should not invent such names on your own.
-    def __init__(self):
+    def __init__(self, name, age):
         # Assign the argument to the instance's name attribute
-        self.name = "Ahmad"
+        self.name = name
 
         # Initialize property
-        self._age = 24
+        self._age = age 
 
     # An instance method. All methods take "self" as the first argument
     def say(self, msg):
@@ -59,7 +52,7 @@ class Ahmad:
 # module is the main program.
 if __name__ == '__main__':
     # Instantiate a class
-    i = Ahmad()
+    i = Human("ahmad", 24)
     i.say("hi")
     
     # i is an instances of type Ahmad, or in other words: an Ahmad object
@@ -67,12 +60,12 @@ if __name__ == '__main__':
     # Call our class method
     i.say(i.get_species())          # "Ahmad: H. sapiens"
     # Change the shared attribute
-    Ahmad.species = "H. neanderthalensis"
+    Human.species = "H. neanderthalensis"
     i.say(i.get_species())          # => "Ahmad: H. neanderthalensis"
 
 
     # Call the static method
-    print(Ahmad.grunt())            # => "*grunt*"
+    print(Human.grunt())            # => "*grunt*"
 
 
     # Update the property for this instance
